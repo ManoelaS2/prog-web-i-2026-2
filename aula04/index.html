@@ -68,14 +68,20 @@
             <fieldset>
                 <legend>Dados do usuário</legend>
                 <label for="cp-nome">Seu nome:</label>
-                <input type="text" id="cp-nome" name="nome" placeholder="Ex.: Manoela Amaral"> <br><br>
+                <input type="text" id="cp-nome" name="nome" required 
+                minlength="3" 
+                minlength="100"
+                placeholder="Ex.: Manoela Amaral"> <br><br>
 
                 <label for="cp-email">E-mail:</label>
-                <input type="emaill" id="cp-email" name="email" placeholder="manoela@gmail.com"> <br><br>
+                <input type="email" id="cp-email" name="email" required placeholder="manoela@gmail.com"> <br><br>
 
 
                 <label for="cp-mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="cp-mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <textarea name="mensagem" id="cp-mensagem" rows="5" required 
+                minlength="3" 
+                minlength="10"                
+                placeholder="Escreva sua mensagem aqui..."></textarea>
             </fieldset>
             <button type="submit">Enviar dados</button>
         </form>
@@ -85,7 +91,7 @@
             <fieldset>
                 <legend>Endereço</legend>
 
-                <select name="municipio" id="cp-municipio">
+                <select name="municipio" id="cp-municipio" required>
                 <option value=""></option>
                 <option value="itapaci">Itapaci</option>
                 <option value="ceres">Ceres</option>
@@ -95,13 +101,20 @@
                 </select> <br> <br>
 
                 <label for="cp-rua">Rua:</label>
-                <input type="text" id="cp-rua" name="rua" placeholder="Ex.: Rua Getúlio Vargas"> <br><br>
+                <input type="text" id="cp-rua" name="rua" required minlength="3" 
+                minlength="9999"
+                placeholder="Ex.: Rua Getúlio Vargas"> <br><br>
 
                 <label for="cp-bairro">Bairro:</label>
-                <input type="text" id="cp-bairro" name="bairro" placeholder="Ex.: Setor Trindade"><br><br>
+                <input type="text" id="cp-bairro" name="bairro" 
+                required minlength="3" 
+                minlength="9999"
+                placeholder="Ex.: Setor Trindade"><br><br>
 
                 <label for="cp-numero">Número:</label>
-                <input type="number" id="cp-numero" name="numero"> <br><br>
+                <input type="number" id="cp-numero" name="numero"
+                min="-1" max="9999"
+                > <br><br>
             </fieldset>
 
             <fieldset>
@@ -132,8 +145,8 @@
 
                 <input type="checkbox" id="cp-outro" name="como-conheceu" value="outro">
                 <label for="cp-outro">Outros</label>
-
             </fieldset>
+
 
             <button type="submit">Salvar dados</button>
 
