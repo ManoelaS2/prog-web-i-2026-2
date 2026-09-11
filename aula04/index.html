@@ -95,7 +95,7 @@
         <form action="#" id="pedidos-online" method="get">
             <fieldset>
                 <legend>Endereço</legend>
-
+                <label for="cp-municipio">Município:</label>
                 <select name="municipio" id="cp-municipio" required>
                 <option value=""></option>
                 <option value="itapaci">Itapaci</option>
@@ -125,17 +125,18 @@
 
                 <label for="cp-numero">Número:</label>
                 <input type="number" id="cp-numero" name="numero"
-                min="-1" max="9999"
+                min="-1" max="9999" 
                 > <br><br>
+                <small id="instrucao-numero">Digite -1 caso não tenha número.</small>
             </fieldset>
 
             <fieldset>
                 <legend>Forma de Pagamento</legend>
                 <input type="radio" id="cp-cartao-credito" name="pagamento" value="cartao-credito">
-                <label for="cp-cartao-credito">Cartão de Credito</label>
+                <label for="cp-cartao-credito">Cartão de Credito</label> <br><br>
                 
                 <input type="radio" id="cp-cartao-debito" name="pagamento" value="cartao-debito">
-                <label for="telefone">Telefone</label>
+                <label for="telefone">Telefone</label> <br><br>
 
                 <input type="radio" id="cp-pix" name="pagamento" value="text">
                 <label for="cp-pix">Pix</label>              
@@ -144,16 +145,16 @@
             <fieldset>
                 <legend>De onde você nos conhece?</legend>
                 <input type="checkbox" id="cp-whats" name="como-conheceu" value="whats">
-                <label for="cp-whats">WhatsApp</label>
+                <label for="cp-whats">WhatsApp</label> <br><br>
 
                 <input type="checkbox" id="cp-insta" name="como-conheceu" value="insta">
-                <label for="cp-insta">Instagram</label>
+                <label for="cp-insta">Instagram</label> <br><br>
 
                 <input type="checkbox" id="cp-face" name="como-conheceu" value="face">
-                <label for="cp-face">Facebook</label>
+                <label for="cp-face">Facebook</label> <br><br>
 
                 <input type="checkbox" id="cp-indicacao" name="como-conheceu" value="indicacao">
-                <label for="cp-indicacao">Indicação</label>
+                <label for="cp-indicacao">Indicação</label> <br><br>
 
                 <input type="checkbox" id="cp-outro" name="como-conheceu" value="outro">
                 <label for="cp-outro">Outros</label>
