@@ -76,6 +76,11 @@
                 <label for="cp-email">E-mail:</label>
                 <input type="email" id="cp-email" name="email" required placeholder="manoela@gmail.com"> <br><br>
 
+                <label for="cp-fone">Telefone:</label>
+                <input type="text" id="cp-fone" name="telefone" required 
+                placeholder="(62)99999-0000"
+                title="Formato: (DD) 99999-0000"> <br><br>
+
 
                 <label for="cp-mensagem">Mensagem:</label>
                 <textarea name="mensagem" id="cp-mensagem" rows="5" required 
@@ -99,6 +104,13 @@
                 <option value="carmo-do-rio-verde">Carmo do Rio Verde</option>
                 <option value="value">Outro município</option>
                 </select> <br> <br>
+
+                <label for="cp=cep">CEP:</label>
+                <input type="text" id="cp-cep" name="cep" required 
+                pattern="\d{5}-\d{3}" 
+                placeholder="00000-000"
+                title="Formato: 00000-000"> <br><br>
+
 
                 <label for="cp-rua">Rua:</label>
                 <input type="text" id="cp-rua" name="rua" required minlength="3" 
