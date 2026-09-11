@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroVale Cooperativa</title>
+</head>
+<body>
+    <!--src = Caminho da imagem-->
+    <!--alt = descrição da imagem -->
+    <!--Largura: widht  -->
+    <!--Altura: height -->
+    <img src="img/logo_agro.png" 
+    alt="Logo da AgroVale Cooperativa" 
+    width="200" height="200"> 
+    <h1>AgroVale Cooperativa</h1>
+    
+    <ul>
+        <li><a href="#Sobre">Home</a></li>
+        <li><a href="#Produção">Produtos</a></li>
+        <li><a href="#Contato">Contato</a></li>
+    </ul>
+
+    
+
+    <h2 id="Sobre">Sobre</h2>
+    <p>
+        A AgroVale Cooperativa<strong> é uma Cooperativa muito relevante </strong>no Vale do São Patrício. Por produtores rurais na região de Ceres e Rialma, no Cerrado goiano.
+    </p>
+
+    <p>
+        Reunimos mais de 340 cooperados em 18 municípios, com foco na produção de grãos e no fortalecimento da agricultura familiar e empresarial do Vale.
+    </p>
+    <h2 id="Produção">Produtos</h2>
+    <p>
+        Números da safra 2024/2025:
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cultura</th>
+                <th>Área (alqueires)</th>
+                <th>Produção</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Soja</td>
+                <td>1.200</td>
+                <td>50.000</td>
+            </tr>
+
+            <tr>
+                <td>Milho</td>
+                <td>3.400</td>
+                <td>20.000</td>
+            </tr>
+
+            <tr>
+                <td>Arroz</td>
+                <td>40.000</td>
+                <td>20.000</td>
+            </tr>
+            <tr>
+                <td>Feijão</td>
+                <td>31.000</td>
+                <td>13.000</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <h2 id="Contato">Contato</h2>
+    <a href="mailto:contato@agrovale.coop.br">contato@agrovale.coop.br</a>
+
+    <h2 id="Form contato">Form de Contato</h2>
+    <form action="#" method="get" id="form-x">
+        <fieldset>
+            <legend>Form de Contato</legend>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" placeholder="Ex.: Manoela Amaral"> <br> <br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="manoela@gmail.com"> <br> <br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" placeholder="(00)0000-0000"> <br> <br>
+
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg" 
+            name="msg" 
+            rows="6" 
+            placeholder="Escreva sua mensagem aqui..."></textarea>        
+        </fieldset>
+        <button type="submit">Salvar dados</button>
+    </form>
+
+    <h2 id="Pré-cadastro">Pré-cadastro</h2>
+    <p>Preencher o formulário abaixo.</p>
+    <form action="#" method="get" id="form-precadastro">
+        <fieldset>
+            <legend>Dados do Proprietario </legend>
+            <label dor="cp-name">Nome completo:</label>
+            <input type="text" id="cp-nome" name="cp-nome" placeholder="Ex.: Manoela Amaral"
+            required minlength="3"
+            required maxlength="1000"> <br> <br>
+
+            <!--Usando o pattern--> 
+            
+
+            <label for="cp-cpf">CPF:</label>
+            <input type="text" id="cp-cpf" name="cpf" placeholder="000.000.000-00"
+            required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            title="Formato: 000.000.000-00">
+
+            <label for="cp-email">E-mail</label>
+            <input type="email" id="cp-email" name="cp-email"> <br> <br> 
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados da propriedade</legend>
+            <label for="cp-municipio">Município:</label>
+            <select name="municipio" id="cp-municipio">
+                 <option value="itapaci">Itapaci</option>
+                <option value="ceres">Ceres</option>
+                <option value="rialma">Rialma</option>
+                <option value="carmo-do-rio-verde">Carmo do Rio Verde</option>
+                <option value="value">Outro município</option>
+            </select> <br> <br>
+
+            <label for="cp-area">Área total:</label>
+            <input type="number" id="cp-area" name="cp-area" min="1" max="9999">
+
+            <p>Culturas produzidas:</p>
+            <label>
+            <input type="checkbox" name="cultura" value="soja"> Soja
+            </label>
+
+            <label>
+            <input type="checkbox" name="cultura" value="milho"> Milho
+            </label>
+
+            <label>
+            <input type="checkbox" name="cultura" value="arroz"> Arroz
+            </label>
+
+            <label>
+            <input type="checkbox" name="cultura" value="feijao"> Feijão 
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias de contato</legend>
+            <input type="radio" id="email" name="email" value="email">
+            <label for="email">Email</label>
+            
+            <input type="radio" id="telefone" name="telefone" value="text">
+            <label for="telefone">Telefone</label>
+
+            <input type="radio" id="whats" name="whats" value="text">
+            <label for="whats">WhatsApp</label>
+
+        </fieldset>
+
+        <button type="submit">Enviar mensagem</button>
+    </form>
+
+
+</body>
+</html>
