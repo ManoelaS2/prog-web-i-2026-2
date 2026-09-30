@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroVale Cooperativa — Vale de São Patrício</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body id="pagina-agrovale">
+
+  <!-- header: cabeçalho da página — contém logo e navegação principal -->
+  <header id="cabecalho">
+
+    <img src="/aula03/img/logo_agro.png"
+         alt="Logomarca da AgroVale Cooperativa de Produtores do Vale de São Patrício"
+         width="150" height="150"
+         class="logo-principal">
+
+    <!-- nav: bloco de navegação — menu principal do site -->
+    <nav id="menu-principal">
+      <ul>
+        <li><a href="#sobre"      class="link-nav">Sobre</a></li>
+        <li><a href="#producao"   class="link-nav">Produção</a></li>
+        <li><a href="#destaques"  class="link-nav">Cooperados</a></li>
+        <li><a href="#associe-se" class="link-nav">Associe-se</a></li>
+        <li><a href="#contato"    class="link-nav">Contato</a></li>
+      </ul>
+    </nav>
+
+  </header>
+ 
+  <main id="conteudo-principal">
+
+    <section id="sobre" class="secao">
+      <h2>Sobre a AgroVale</h2>
+      <p>
+        A AgroVale Cooperativa de Produtores do Vale de São Patrício foi fundada em 1987
+        por produtores rurais da região de Ceres e Rialma, no Cerrado goiano.
+      </p>
+      <p>
+        Reunimos <strong>mais de 340 cooperados</strong> em 18 municípios,
+        com foco na produção de grãos e no fortalecimento da
+        <em>agricultura familiar e empresarial</em> do Vale.
+      </p>
+    </section>
+ 
+    <aside class="aviso-safra">
+      <h3>Aviso — Safra 2026</h3>
+      <p>
+        Prazo de inscrição para a safra 2026 encerra em
+        <strong>30 de setembro de 2026</strong>.
+        Use o formulário de contato abaixo ou ligue: (62) 3323-0000.
+      </p>
+    </aside>
+    
+    <section id="producao" class="secao-destaque">
+      <h2>Produção 2025</h2>
+      <p>Números da safra 2024/2025 (1 alqueire goiano = 4,84 ha):</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cultura</th>
+            <th>Área (alqueires goianos)</th>
+            <th>Produção (sacas de 60 kg)</th>
+            <th>Produtividade (sac/alq)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Soja</td>
+            <td>1.240</td>
+            <td>74.400</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Milho</td>
+            <td>860</td>
+            <td>103.200</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>Sorgo</td>
+            <td>420</td>
+            <td>25.200</td>
+            <td>60</td>
+          </tr>
+          <tr class="linha-total">
+            <td><strong>Total</strong></td>
+            <td><strong>2.520</strong></td>
+            <td><strong>202.800</strong></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+   
+    <section id="destaques" class="secao">
+      <h2>Cooperados em destaque</h2>
+
+     
+      <article class="card-cooperado">
+        <h3>João Batista Ferreira</h3>
+        <p>Ceres, GO — Soja e milho — 18 anos na cooperativa</p>
+        <p><em>"A AgroVale mudou a forma como planejo minha safra.
+          O acesso técnico e o crédito cooperativo transformaram minha produtividade."</em></p>
+      </article>
+      
+      <article class="card-cooperado">
+        <h3>Ana Clara Rodrigues</h3>
+        <p>Rubiataba, GO — Sorgo e feijão — 7 anos na cooperativa</p>
+        <p><em>"Entrar para a cooperativa foi a melhor decisão da minha vida como produtora.
+          O apoio na comercialização fez toda a diferença."</em></p>
+      </article>
+      
+
+    </section>
+    
+    <section id="associe-se" class="secao">
+      <h2>Associe-se à AgroVale</h2>
+      <p>Preencha o formulário para iniciar seu pré-cadastro de cooperado.</p>
+
+      <form action="#" method="post" id="form-cooperado">
+
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <label for="cp-nome">Nome completo</label>
+          <input type="text" id="cp-nome" name="nome"
+                 required minlength="3" maxlength="100">
+
+          <label for="cp-cpf">CPF</label>
+          <input type="text" id="cp-cpf" name="cpf"
+                 pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                 placeholder="000.000.000-00"
+                 title="Formato: 000.000.000-00"
+                 required>
+
+          <label for="cp-email">E-mail</label>
+          <input type="email" id="cp-email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dados da propriedade</legend>
+
+          <label for="cp-municipio">Município</label>
+          <select id="cp-municipio" name="municipio" required>
+            <option value="">Selecione...</option>
+            <option value="ceres">Ceres</option>
+            <option value="rialma">Rialma</option>
+            <option value="carmo-rio-verde">Carmo do Rio Verde</option>
+            <option value="rubiataba">Rubiataba</option>
+            <option value="outro">Outro município</option>
+          </select>
+
+          <label for="cp-area">Área total (alqueires goianos)</label>
+          <input type="number" id="cp-area" name="area"
+                 min="1" max="9999" step="0.5" required>
+
+          <p>Culturas produzidas:</p>
+          <label><input type="checkbox" name="cultura" value="soja"> Soja</label>
+          <label><input type="checkbox" name="cultura" value="milho"> Milho</label>
+          <label><input type="checkbox" name="cultura" value="sorgo"> Sorgo</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferência de contato</legend>
+          <label><input type="radio" name="contato-pref" value="email" checked> E-mail</label>
+          <label><input type="radio" name="contato-pref" value="telefone"> Telefone</label>
+          <label><input type="radio" name="contato-pref" value="whatsapp"> WhatsApp</label>
+        </fieldset>
+
+        <button type="submit">Enviar pré-cadastro</button>
+
+      </form>
+    </section>
+   
+
+  </main>
+  
+  <footer id="rodape">
+
+    
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+
+      <form action="#" method="post" id="form-contato">
+        <fieldset>
+          <legend>Dados para retorno</legend>
+
+          <label for="c-nome">Nome completo</label>
+          <input type="text" id="c-nome" name="nome"
+                 required minlength="3" placeholder="Ex.: João da Silva">
+
+          <label for="c-email">E-mail</label>
+          <input type="email" id="c-email" name="email"
+                 required placeholder="joao@exemplo.com">
+
+          <label for="c-msg">Mensagem</label>
+          <textarea id="c-msg" name="mensagem" rows="4"
+                    required minlength="10"
+                    placeholder="Escreva sua mensagem aqui..."></textarea>
+        </fieldset>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+    </section>
+    
+
+    <p>Av. Central, 1.200 — Ceres, GO — CEP 76.300-000<br>
+       Telefone: (62) 3323-0000</p>
+
+    <p>
+      <a href="mailto:contato@agrovale.coop.br" class="link-contato">
+        contato@agrovale.coop.br
+      </a>
+    </p>
+
+    <p>
+      <small>
+        AgroVale Cooperativa de Produtores do Vale de São Patrício
+        — CNPJ fictício para fins didáticos · 2026/2
+      </small>
+    </p>
+
+  </footer>
+ 
+
+</body>
+</html>

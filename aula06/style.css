@@ -1,0 +1,273 @@
+:root {
+    --verde:   #1E5631;
+    --verde2:  #1E8449;
+    --verde3:  #3FA06A;
+    --areia:   #FAF9F4;
+    --ambar:   #C8892A;
+    --tinta:   #1A1A1A;
+    --cinza:   #5A6360;
+    --linha:   #D8DED9;
+    --fundo2:  #EAF2ED;
+  }
+  
+  /* 
+  Seletor universal: remove margens e paddings nulo (padrão navegador) 
+  box-sizing: border-box
+  */
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* 
+    font-family
+    font-size
+    line-height
+    color
+    backgroung
+  */
+  body {
+    font-family: "Arial, Helvetica, sans-serif";
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--tinta);
+    background-color: var(--areia);
+  }
+
+  /* 
+    color
+    line-heigh
+  */
+  h1, h2, h3{
+    color: var(--verde);
+    line-height: 1.2;
+
+  }
+
+  /* 
+    font-size
+    margin-botton
+  */
+  h2{
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  h3{
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  p{
+    font-size: 15px;
+    margin-bottom: 10px;
+    max-width: 560px; /*70ch*/
+
+  }
+
+  a{
+    color: var(--verde2);
+    text-decoration: none;
+
+  }
+
+  a:hover{
+    text-decoration: underline;
+    color: var(--ambar);
+
+  }
+
+  /* PARTE 2 */
+  /* 
+    Cabeçalho
+    background-color
+    padding
+  */
+  #cabecalho{
+    background-color: var(--verde);
+    padding: 24px 32px;
+    
+
+  }
+
+  /* logo-principal
+    ocupar toda largura da tela (usar display: block;)
+    max-width
+  */
+  .logo-principal{
+    display: block;
+    max-width: 320px;
+  }
+
+  /* 
+    seletor descedente: ul que esta dentro de menu-principal.
+    remove marcadores (list-style) e dispões os intens em linha (display: flex)
+    gap: --> espaço entre os elementos filhos
+    flex-wrap (permite quebra de linha quando não houver espaço)
+  */
+
+  #menu-principal ul{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  /* 
+  Seletor de classe: link-nav
+  color
+  text-decoration (retirar o underline)
+  font-weigh: bold (texto em negrito com traço mais grosso)
+  */
+
+  .link-nav{
+    color: var(--areia);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.5px; /* espaçamento entre as letras*/
+  }
+
+  /* 
+    pseudo-classe: houver do link-nav
+    - color
+  */
+
+ .link-nav:hover{
+    color:aqua
+  }
+
+  /* 
+  Seção usando a classe secao
+  padding
+
+  */
+
+  .secao{
+    padding: 48px 32px;
+    border-bottom: 1px solid var(--verde);
+
+  }
+
+  /* quando tem espaço eu coloco ponto
+    antes:
+      .secao.destaque{
+
+      }
+  */
+
+  /* 
+  seção destaque
+    background-color:antiquewhite; alterar cor de fundo da seção destaque
+  */
+  .secao-destaque{
+    background-color:antiquewhite;
+  }
+
+  /* 
+  aside
+  alterar fundo
+  alterar a borda da esquerda (Espressura e cor)
+  padding
+  */
+
+  .aviso-safra{
+    background-color: rgb(232, 241, 255);
+    border-left: 5px solid rgb(46, 111, 215);
+    padding: 16px 32px;
+    margin: 24px 0;
+    border-radius: 10px;
+  } 
+
+  .aviso-safra h3{
+    color:#1a0068;
+    margin-bottom: 8px;
+  }
+
+  /* 
+  cards (elementos articles)
+  */
+  .card-cooperado{
+    border: 1px solid var(--linha);
+    border-left: 5px solid var(--verde3);
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    box-shadow: #005116 2px 2px 4px;
+     
+  }
+
+  .card-cooperado:hover{
+    background-color: beige;
+  }
+  
+
+  /* 
+    tabela (table)
+    largura de 100%
+    remover espaçamento entre as bordas das células (border-collapse)
+    margin-top
+  */
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px
+    
+  }
+
+  /* 
+  linha do cabeçalho da tabela
+  */
+
+  th{
+    background-color: var(--verde);
+    color: var(--areia);
+    font-weight: bold ;
+    padding: 9px 16px;
+    text-align: center;
+
+
+  }
+
+  td{
+    padding: 9px 16px;
+    border-bottom: 1px solid var(--linha);
+    vertical-align: top;
+  }
+
+  .linha-total{
+    background-color: lightgoldenrodyellow;
+  }
+
+  fieldset{
+    border: 1px solid var(--linha);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+/* 
+legend
+*/
+
+  label{
+    display: block;
+    font-size: 14px;
+    color: var(--cinza);
+    margin-bottom: 4px;
+    margin-top: 12px;
+  }
+
+  input,
+  select,
+  textarea{
+    width: 100%;
+    border: 1px solid var(--linha); 
+    padding: 4px 12px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--fundo2);
+
+  }
