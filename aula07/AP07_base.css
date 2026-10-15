@@ -1,0 +1,120 @@
+/* AP07_base.css — Arquivo base: adicione Flexbox conforme os passos da aula */
+:root {
+  --verde:   #1B4332;
+  --verde2:  #2D6A4F;
+  --verde3:  #52B788;
+  --areia:   #F8F5EF;
+  --ambar:   #C8892A;
+  --tinta:   #1A1A1A;
+  --cinza:   #5A6360;
+  --linha:   #D8DED9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--areia);
+  color: var(--tinta);
+}
+
+/* --- Cabeçalho --- */
+#cabecalho {
+  background-color: var(--verde);
+  padding: 1rem 2rem;
+  /* TODO PASSO 1: adicionar display:flex; justify-content:space-between; align-items:center */
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--ambar);
+}
+
+/* --- Navegação --- */
+.nav-links {
+  /* TODO PASSO 2: adicionar display:flex; gap:2rem; list-style:none; padding:0 */
+}
+
+.link-nav {
+  color: #9FD3B4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-nav:hover { color: var(--ambar); }
+
+/* --- Galeria --- */
+#galeria {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#galeria h2 {
+  color: var(--verde);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.grade-cards {
+  /* TODO PASSO 3: adicionar display:flex; flex-wrap:wrap; gap:1.5rem */
+}
+
+/* --- Card --- */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  /* TODO PASSO 3: adicionar flex:1 1 220px */
+}
+
+.card img { width: 100%; display: block; }
+
+.card-corpo {
+  padding: 1rem;
+  /* TODO PASSO 4: adicionar display:flex; flex-direction:column */
+}
+
+.card-titulo { color: var(--verde); margin-bottom: 0.5rem; }
+
+.card-descricao {
+  color: var(--cinza);
+  font-size: 0.9rem;
+  /* TODO PASSO 4: adicionar flex:1 */
+}
+
+.card-rodape {
+  margin-top: 1rem;
+  /* TODO PASSO 4: adicionar display:flex; justify-content:space-between; align-items:center */
+}
+
+.card-preco {
+  font-weight: bold;
+  color: var(--verde2);
+  font-size: 1.1rem;
+}
+
+.btn-card {
+  background-color: var(--ambar);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-card:hover { background-color: var(--verde2); }
+
+/* --- Rodapé --- */
+#rodape {
+  background-color: var(--verde);
+  color: #9FD3B4;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.875rem;
+}
