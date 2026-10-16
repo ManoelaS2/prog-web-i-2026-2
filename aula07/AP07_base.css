@@ -25,6 +25,9 @@ body {
   background-color: var(--verde);
   padding: 1rem 2rem;
   /* TODO PASSO 1: adicionar display:flex; justify-content:space-between; align-items:center */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-texto {
@@ -32,10 +35,13 @@ body {
   font-weight: bold;
   color: var(--ambar);
 }
-
 /* --- Navegação --- */
 .nav-links {
   /* TODO PASSO 2: adicionar display:flex; gap:2rem; list-style:none; padding:0 */
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
 }
 
 .link-nav {
@@ -61,6 +67,9 @@ body {
 
 .grade-cards {
   /* TODO PASSO 3: adicionar display:flex; flex-wrap:wrap; gap:1.5rem */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 /* --- Card --- */
@@ -70,6 +79,7 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
   /* TODO PASSO 3: adicionar flex:1 1 220px */
+  flex: 1 1 220px;
 }
 
 .card img { width: 100%; display: block; }
@@ -77,6 +87,8 @@ body {
 .card-corpo {
   padding: 1rem;
   /* TODO PASSO 4: adicionar display:flex; flex-direction:column */
+  display: flex;
+  flex-direction: column;
 }
 
 .card-titulo { color: var(--verde); margin-bottom: 0.5rem; }
@@ -85,11 +97,16 @@ body {
   color: var(--cinza);
   font-size: 0.9rem;
   /* TODO PASSO 4: adicionar flex:1 */
+  flex: 1;
+  
 }
 
 .card-rodape {
   margin-top: 1rem;
   /* TODO PASSO 4: adicionar display:flex; justify-content:space-between; align-items:center */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-preco {

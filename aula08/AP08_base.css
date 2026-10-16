@@ -1,0 +1,288 @@
+/* AP08_base.css — Arquivo base: adicione Grid conforme os passos da aula */
+/* (O Flexbox da AP07 já está aqui; você vai adicionar Grid em cima disso) */
+
+/* ============================================================
+   VARIÁVEIS E RESET
+   ============================================================ */
+
+:root {
+  --verde:  #1B4332;
+  --verde2: #2D6A4F;
+  --verde3: #52B788;
+  --areia:  #F8F5EF;
+  --ambar:  #C8892A;
+  --tinta:  #1A1A1A;
+  --cinza:  #5A6360;
+  --linha:  #D8DED9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================================
+   TIPOGRAFIA BASE
+   ============================================================ */
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--areia);
+  color: var(--tinta);
+  line-height: 1.6;
+  /* TODO PASSO 1: transformar #pagina em grid container de página */
+  /* Dica: display:grid; grid-template-rows: auto 1fr auto; min-height:100vh */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   CABEÇALHO — Flexbox da AP07 (já aplicado)
+   ============================================================ */
+
+#cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde);
+  color: var(--areia);
+  padding: 1rem 2rem;
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--areia);
+}
+
+/* ============================================================
+   NAVEGAÇÃO — Flexbox da AP07 (já aplicado)
+   ============================================================ */
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link-nav {
+  color: var(--areia);
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.link-nav:hover {
+  border-bottom-color: var(--verde3);
+  color: var(--verde3);
+}
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL
+   ============================================================ */
+
+#conteudo-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ============================================================
+   SEÇÃO EXPLORAR — sem Grid ainda
+   ============================================================ */
+
+/* TODO PASSO 2: transformar #explorar em grid com 2 colunas
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1.5rem;
+   margin-bottom: 3rem;
+*/
+#explorar {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* TODO PASSO 2: usar grid-column para o h2 ocupar toda a largura
+   grid-column: 1 / -1;
+*/
+#explorar h2 {
+  color: var(--verde);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  grid-column: 1 / -1;
+}
+
+.card-categoria {
+  background-color: #fff;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cat-icone {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-categoria h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--verde2);
+}
+
+.card-categoria p {
+  font-size: 0.875rem;
+  color: var(--cinza);
+}
+
+/* ============================================================
+   SEÇÃO DESTAQUES
+   ============================================================ */
+
+#destaques h2 {
+  color: var(--verde);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* TODO PASSO 3: substituir o Flexbox abaixo por Grid responsivo
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1.5rem;
+   (e remover o flex: 1 1 220px do .card)
+*/
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ============================================================
+   CARD DE PRODUTO — Flexbox da AP07 (já aplicado)
+   ============================================================ */
+
+.card {
+  background-color: #ffff;
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-corpo {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--verde2);
+  margin-bottom: 0.5rem;
+}
+
+.card-descricao {
+  font-size: 0.875rem;
+  color: var(--cinza);
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.card-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-preco {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ambar);
+}
+
+.btn-card {
+  background-color: var(--verde2);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-card:hover {
+  background-color: var(--verde);
+}
+
+/* TODA A PARTE 4 */
+@media(max-width: 900px) {
+  #conteudo-principal {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-areas: 
+    "explorar explorar" 
+    "destaques aside"; 
+    gap: 2rem;
+    align-items: start;
+   
+  }
+
+  #explorar {
+    grid-area: explorar;
+  }
+  #destaques {
+    grid-area: destaques;
+  }
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+
+#rodape {
+  background-color: var(--verde);
+  color: var(--areia);
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 0.875rem;
+}
