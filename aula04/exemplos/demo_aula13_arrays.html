@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Aula 13 — Arrays</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f0f0f0; }
+    h1 { color: #1a3a5c; }
+    .caixa { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+    input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-right: 8px; }
+    button { padding: 8px 16px; background: #2563a8; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin-right: 6px; }
+    button:hover { background: #1a3a5c; }
+    #lista-output { list-style: none; padding: 0; }
+    #lista-output li { background: #f5f7fa; padding: 8px 12px; border-radius: 4px; margin-bottom: 6px; border-left: 4px solid #2563a8; }
+    #saida-mapa, #saida-filtro { font-size: .95rem; color: #333; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>Demo — Arrays</h1>
+
+  <!-- Bloco 1: Lista dinâmica -->
+  <div class="caixa">
+    <h2>Lista de Frutas</h2>
+    <input type="text" id="input-fruta" placeholder="Nome da fruta">
+    <button id="btn-adicionar">Adicionar</button>
+    <button id="btn-remover">Remover último</button>
+    <ul id="lista-output"></ul>
+  </div>
+
+  <!-- Bloco 2: map e filter -->
+  <div class="caixa">
+    <h2>Preços com map e filter</h2>
+    <button id="btn-mapa">Aplicar 10% desconto (map)</button>
+    <p id="saida-mapa"></p>
+    <button id="btn-filtro">Só baratos &lt; R$5 (filter)</button>
+    <p id="saida-filtro"></p>
+  </div>
+
+  <!-- forEach -->
+  <div class="caixa">
+    <h2>forEach — percorrer lista</h2>
+    <button id="btn-foreach">Listar no console</button>
+    <p id="saida-foreach" style="font-size:.9rem;color:#555;"></p>
+  </div>
+
+  <script src="demo_aula13_arrays_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q10 - Lista de Tarefas</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 0 15px;
+      color: #222;
+    }
+    h1 { color: #2f9e44; }
+    .form { display: flex; gap: 8px; margin-bottom: 20px; }
+    #inputTarefa { flex: 1; padding: 8px; font-size: 1rem; }
+    button { cursor: pointer; padding: 8px 14px; font-size: 1rem; }
+    #btnAdicionar { background: #2f9e44; color: #fff; border: none; border-radius: 4px; }
+    ul { list-style: none; padding: 0; }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    li button { background: none; border: none; color: #c92a2a; font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <h1>Lista de Tarefas</h1>
+
+  <div class="form">
+    <input type="text" id="inputTarefa" placeholder="Digite uma tarefa">
+    <button id="btnAdicionar">Adicionar</button>
+  </div>
+
+  <ul id="listaTarefas"></ul>
+
+  <script>
+    // Q10
+    const tarefas = [];
+
+    const input = document.querySelector("#inputTarefa");
+    const botao = document.querySelector("#btnAdicionar");
+    const ul = document.querySelector("#listaTarefas");
+
+    function renderizar() {
+      ul.innerHTML = ""; // limpa para não duplicar
+
+      tarefas.forEach((tarefa, indice) => {
+        const li = document.createElement("li");
+
+        const span = document.createElement("span");
+        span.textContent = tarefa;
+
+        const btnRemover = document.createElement("button");
+        btnRemover.textContent = "✕";
+        btnRemover.addEventListener("click", () => {
+          tarefas.splice(indice, 1); // remove a tarefa pelo índice
+          renderizar();
+        });
+
+        li.appendChild(span);
+        li.appendChild(btnRemover);
+        ul.appendChild(li);
+      });
+    }
+
+    function adicionarTarefa() {
+      const texto = input.value.trim();
+      if (texto === "") return; // ignora tarefa vazia
+
+      tarefas.push(texto);
+      input.value = "";
+      input.focus();
+      renderizar();
+    }
+
+    botao.addEventListener("click", adicionarTarefa);
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") adicionarTarefa();
+    });
+  </script>
+</body>
+</html>
